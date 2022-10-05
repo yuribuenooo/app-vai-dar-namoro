@@ -1,22 +1,56 @@
 <ion-content>
-  <h1>Vai dar namoro</h1>
-  <h3>Vamos ver se ele(a) goxxxxta?</h3>
+  <h1>Vai dar namoro ❤</h1>
+ 
+
+  <h3>Vamos ver se ele(a) goxxxxta? 😍 😍</h3>
+
 
   <ion-item class="ion-no-padding">
     <ion-label position="floating">Primeiro nome</ion-label>
     <ion-input [(ngModel)]="nome1" type="text"></ion-input>
   </ion-item>
-  <div class="icone"><ion-icon name="add"></ion-icon></div>
+  <div class="icone">
+    <ion-icon name="add"></ion-icon>
+  </div>
   <ion-item class="ion-no-padding">
     <ion-label position="floating">Segundo nome</ion-label>
+    
+ 
     <ion-input [(ngModel)]="nome2" type="text"></ion-input>
   </ion-item>
+  
+ 
 
   <ion-button (click)="calcular()" id="open-resposta" expand="full" color="danger">Calcular</ion-button>
 
   <ion-modal id="resposta" #modal trigger="open-resposta">
     <ng-template>
-      <h1>{{porcentagem}}%</h1> 
+      <h1>{{porcentagem}}%</h1>
     </ng-template>
   </ion-modal>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Marcar Encontro</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="speakers">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Matches</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="map">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Endereço</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="about">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>Sobre</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
